@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Demo Prediksi Model Machine Learning</h2>
+
+<form action="{{ url_for('predict') }}" method="post">
+    <label for="jenis_kelamin">Jenis Kelamin :</label><br>
+    <select name="jenis_kelamin" id="jenis_kelamin">
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+    </select>
+    <br>
+    <label for="umur">Umur :</label><br>
+    <input type="number" id="umur" name="umur">
+    <br>
+    <label for="tekanan_darah_tinggi">Punya Tekanan Darah Tinggi?</label><br>
+    <select name="tekanan_darah_tinggi" id="tekanan_darah_tinggi">
+        <option value="Ya">Ya</option>
+        <option value="Tidak">Tidak</option>
+    </select>
+    <br>
+    <label for="penyakit_jantung">Punya Penyakit Jantung?</label><br>
+    <select name="penyakit_jantung" id="penyakit_jantung">
+        <option value="Ya">Ya</option>
+        <option value="Tidak">Tidak</option>
+    </select>
+    <br>
+    <label for="pernah_menikah">Pernah Menikah?</label><br>
+    <select name="pernah_menikah" id="pernah_menikah">
+        <option value="Ya">Ya</option>
+        <option value="Tidak">Tidak</option>
+    </select>
+    <br>
+    <label for="pekerjaan">Pekerjaan :</label><br>
+    <select name="pekerjaan" id="pekerjaan">
+        <option value="Swasta">Swasta</option>
+        <option value="Wiraswasta">Wiraswasta</option>
+        <option value="PNS">PNS</option>
+        <option value="Anak-anak">Anak-anak</option>
+        <option value="Belum Bekerja">Belum Bekerja</option>
+    </select>
+    <br>
+    <label for="tempat_tinggal">Tempat Tinggal :</label><br>
+    <select name="tempat_tinggal" id="tempat_tinggal">
+        <option value="Perkotaan">Perkotaan</option>
+        <option value="Pedesaan">Pedesaan</option>
+    </select>
+    <br>
+    <label for="gula_darah">Kadar Gula Darah:</label><br>
+    <input type="number" id="gula_darah" name="gula_darah">
+    <br>
+    <label for="bmi">BMI:</label><br>
+    <input type="number" id="bmi" name="bmi">
+    <br>
+    <label for="merokok">Riwayat Merokok :</label><br>
+    <select name="merokok" id="merokok">
+        <option value="Dulu">Dulu</option>
+        <option value="Tidak Pernah">Tidak Pernah</option>
+        <option value="Ya">Ya, Sampai sekarang</option>
+        <option value="Tidak Tahu">Tidak Tahu/Lupa</option>
+    </select>
+    <br>
+    <br>
+    <button type="submit">Hasil Prediksi</button>
+</form> 
+
+<h2>Hasil prediksi, apakah anda ada kecenderungan terkena stroke? :</h2>
+<h2>{{ hasil }}</h2>
+
+</body>
+</html>
